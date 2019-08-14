@@ -83,7 +83,7 @@
 * yum list sysstat 查看sysstat是否已被安装
 * yum install -y sysstat
 * 进入/etc/cron.d/目录下 打开sysstat文件 修改为每分钟运行一次收集数据
-![sysstat-1](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/sysstat-1.png''修改收集数据精度'')
+![sysstat-1](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/sysstat-1.png "修改收集数据精度")
 * 重启sysstat：systemctl restart sysstat
 * 生成的sa文件会默认保存在 /var/log/sa/路径下
 	1：sa文件为每分钟生成的数据
@@ -131,7 +131,7 @@ sum(increase(node_cpu_seconds_total{mode="idle"}[1m])) by (instance) / sum(incre
 
 * 截图如下：
 
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Prometheus1.png''cpu每分钟的使用率'')
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Prometheus1.png "cpu每分钟的使用率")
 
 * 监控cpu每分钟的总的用户使用率公式如下
 
@@ -141,7 +141,7 @@ sum(increase(node_cpu_seconds_total{mode="idle"}[1m])) by (instance) / sum(incre
 
 * 截图如下：
 
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Prometheus2.png''cpu每分钟的使用率'')
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Prometheus2.png "cpu每分钟的使用率")
 
 * 基于上述我们举一反三 获取其他CPU状态的使用率
 
@@ -171,32 +171,32 @@ sum(increase(node_cpu_seconds_total{mode="idle"}[1m])) by (instance) / sum(incre
 * Add data source-->Prometheus-->Dashboards中导入必须的3个dashboards
 * 具体的设置请查考下列截图
 
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Grafana-DataSiurce-setting1.png ''截图设置1'')
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Grafana-DataSiurce-setting2.png ''截图设置2'')
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Grafana-DataSiurce-setting3.png ''截图设置3'')
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Grafana-DataSiurce-setting4.png ''截图设置4'')
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Grafana-DataSiurce-setting1.png  "截图设置1")
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Grafana-DataSiurce-setting2.png  "截图设置2")
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Grafana-DataSiurce-setting3.png  "截图设置3")
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Grafana-DataSiurce-setting4.png  "截图设置4")
 
 ### 4.2:Grafana新添加dashboard
 
 * 新建DashBoard
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard1.png ''新建DashBoard'')
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard1.png  "新建DashBoard")
 
 * 新建DashBoard
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard2.png ''新建DashBoard'')
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard2.png  "新建DashBoard")
 
 * 新建DashBoard查询的设置
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard3.png ''查询的设置'')
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard3.png  "查询的设置")
 
 * 新建DashBoard修改title和描述
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard4.png ''修改title和描述'')
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard4.png  "修改title和描述")
 
 * 新建DashBoard视图的设置
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard5.png ''新建DashBoard'')
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard5.png  "新建DashBoard")
 
 * 保存
 
 * 在刚刚新建的DashBoard上添加新的监控选项
-![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard6.png ''添加监控选项'')
+![ext3](https://github.com/AnndyTsai/prometheus-sysstat/blob/master/Dashboard6.png  "添加监控选项")
 
 
 ## 5:Prometheus结合Grafana的使用
