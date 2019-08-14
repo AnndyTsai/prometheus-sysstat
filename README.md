@@ -47,12 +47,12 @@
 #### 2.1.4:添加node_exporter到prometheus-Server
 
 * 进入prometheus目录 打开prometheus.yml文件 添加如下内容
-(```)
+```
   - job_name: 'node_exporter'
     static_configs:
       - targets:
         - 'xx.xx.xx.xx:9100'
-(```)
+```
 * 重启prometheus
 	1：ps -ef|grep prometheus
 	2: kill -9 PID
